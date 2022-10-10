@@ -1,0 +1,24 @@
+#!/bin/bash
+#Author: Jooyoung Ser zs519@imperial.ac.uk
+#Script: UnixPrac1.txt
+#Desc: Fasta practical
+#Arguments: none
+#Date: Oct 2022
+
+#setting the current directory to CMEEcoursework/week1/data/fasta
+cd Documents/CMEEcoursework/week1/data/fasta
+#finding the number of lines in the files
+wc -l 407228326.fasta 407228412.fasta E.coli.fasta
+#number of lines: 27, 127 and 78104 respectively
+
+#printing E. coli genome from the second line
+tail -n +2 E.coli.fasta
+
+#counting the number of "ATGC" sequences in the E. coli genome
+tail -n +2  E.coli.fasta > E.coli.genome.fasta   #creating new file without the first line
+grep -o 'ATGC' E.coli.genome.fasta | wc -l    #finding matches which is the counted through pipline
+export A_COUNT=$(grep -o 'A' E.coli.genome.fasta | wc -l) #counting number of each base
+export T_COUNT=$(grep -o 'T' E.coli.genome.fasta | wc -l)
+export C_COUNT=$(grep -o 'C' E.coli.genome.fasta | wc -l)
+export G_COUNT=$(grep -o 'G' E.coli.genome.fasta | wc -l)
+echo "($A_COUNT+$T_COUNT)/($G_COUNT+$C_COUNT)" | bc -l #printing ratio

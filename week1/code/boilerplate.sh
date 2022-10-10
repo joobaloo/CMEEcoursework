@@ -13,7 +13,5 @@ echo -e "\nThis is a shell script! \n"
 #chmod +x boilerplate.sh #chmod FILENAME: change file permissions
 #./boilerplate.sh #can now run the script by just typing this
 
-#checking which directories are already in $PATH and checking if there is already a bin directory
-echo $PATH
-find / -maxdepth 3 -name 'bin' -type d
+
 
