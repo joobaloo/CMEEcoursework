@@ -1,6 +1,10 @@
 #!/bin/bash
+if [ $# -eq 0 ]; then
+    echo "No arguments provided, this script requires two input files"
+    exit 1
+fi
 
 cat $1 > $3
 cat $2 >> $3
-echo "merged file is"
+echo "Merged file is"
 cat $3
