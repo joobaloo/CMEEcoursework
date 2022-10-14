@@ -1,39 +1,18 @@
 #!/usr/bin/env python3
 
-"""Description of this program or application.
-You can use several lines"""
+"""Some functions exemplifying the use of control statements"""
 
-__appname__ = '[application name here]'
 __author__ = 'joobaloo (zs519@ic.ac.uk)'
 __version__ = '0.0.1'
-__license__ = "License for this code/program"
+
 
 ##imports##
 import sys #module to interface our program with the operating system
 
 ##constants##
 
+
 ##functions##
-def main (argv):
-    """main entry point of the program"""
-    print('This is a boilerplate') #indented using two tabs or 4 spaces
-    return 0
-
-if __name__ == "__main__":
-    """Makes sure the "main" function is called from command line"""
-    status = main(sys.argv)
-    sys.exit(status)
-
-#!/usr/bin/env python3
-
-"""Some functions exemplifying the use of control statements"""
-#docstrings are considered part of the running code (normal comments are
-#stripped). Hence, you can access your docstrings at run time.
-__author__ = 'Samraat Pawar (s.pawar@imperial.ac.uk)'
-__version__ = '0.0.1'
-
-import sys
-
 def even_or_odd(x=0): # if not specified, x should take value 0.
 
     """Find whether a number x is even or odd."""
@@ -83,8 +62,10 @@ def main(argv):
     print(is_prime(59))
     print(find_all_primes(100))
     return 0
+#main function works with loop below
 
-if (__name__ == "__main__"):
+if __name__ == "__main__":
+    """Makes sure the "main" function is called from command line"""
     status = main(sys.argv)
     sys.exit(status)
 

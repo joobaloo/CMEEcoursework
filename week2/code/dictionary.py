@@ -1,6 +1,3 @@
-from traceback import TracebackException
-
-
 taxa = [ ('Myotis lucifugus','Chiroptera'),
          ('Gerbillus henleyi','Rodentia',),
          ('Peromyscus crinitus', 'Rodentia'),
@@ -13,9 +10,15 @@ taxa = [ ('Myotis lucifugus','Chiroptera'),
          ('Canis lupus', 'Carnivora'),
         ]
 
-# Write a short python script to populate a dictionary called taxa_dic 
-# derived from  taxa so that it maps order names to sets of taxa.
+# Write a python script to populate a dictionary called taxa_dic derived from
+# taxa so that it maps order names to sets of taxa and prints it to screen.
 # 
+# An example output is:
+#  
+# 'Chiroptera' : set(['Myotis lucifugus']) ... etc. OR, 'Chiroptera': {'Myotis
+#  lucifugus'} ... etc
+
+#### Your solution here #### 
 chiroptera_taxas = [taxa[i][0] for i in range(len(taxa)) if taxa[i][1] == 'Chiroptera']
 rodentia_taxas = [taxa[i][0] for i in range(len(taxa)) if taxa[i][1] == 'Rodentia']
 afrosoricida_taxas = [taxa[i][0] for i in range(len(taxa)) if taxa[i][1] == 'Afrosoricida']
@@ -27,8 +30,6 @@ d = {'Chiroptera' : chiroptera_taxas, 'Rodentia' : rodentia_taxas, 'Afrosoricida
 print(d)
 """this is techinically fine but there must be a way to use a loop?"""
 
-# An example output is:
-#  
-# 'Chiroptera' : set(['Myotis lucifugus']) ... etc.
-#  OR,
-# 'Chiroptera': {'Myotis lucifugus'} ... etc
+# Now write a list comprehension that does the same (including the printing after the dictionary has been created)  
+ 
+#### Your solution here #### 
