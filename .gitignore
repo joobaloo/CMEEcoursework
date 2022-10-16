@@ -1,10 +1,10 @@
 
 .DS_Store
-•.pdf
-•.aux
-•.blg
-•.log
-•.bbl
+*.pdf
+*.aux
+*.blg
+*.log
+*.bbl
 .idea/
 .Rproj.user
-•.csv
+*.csv
