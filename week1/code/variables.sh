@@ -15,24 +15,22 @@ echo "the second argument is $2"
 #assigned variables - explicit declaration
 MY_VAR='some string'
 echo 'the current value of the variable is:' $MY_VAR
-echo #what is the purpose of this echo line? [!]
+echo 
 echo 'please enter a new string'
 read MY_VAR
 echo
 echo 'the current value of the variable is:' $MY_VAR
 echo
 
-#assigned variables - reading (multiple values) from use input
+#assigned variables - reading (multiple values) from user input
 echo 'enter two numbers separated by a space'
 read a b
 echo
-echo 'you entered' $a 'and' $b ; 'their sum is:'
+echo 'you entered' $a 'and' $b 'their sum is:'
 
 #assigned variables; command substitution
-MY_SUM=$(expr $a + $b) #why command not found [!]
-echo MY_SUM
-
-#running the script with 2 arguments = bash variables.sh 1 two (what is different about the output?) [!]
+MY_SUM=$(expr $a + $b) 
+echo $MY_SUM
 
 
 

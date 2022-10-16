@@ -5,6 +5,11 @@
 #Arguments: none
 #Date: 05/10/2022
 
+if [ $# -eq 0 ]; then
+    echo "No arguments provided, this script requires one input file"
+    exit 1
+fi
+
 echo "creating a space separated version of $1 ..."
 cat $1 | tr -s "," " " >> $1.txt
 echo "Done!"

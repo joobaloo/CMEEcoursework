@@ -22,3 +22,4 @@ export T_COUNT=$(grep -o 'T' E.coli.genome.fasta | wc -l)
 export C_COUNT=$(grep -o 'C' E.coli.genome.fasta | wc -l)
 export G_COUNT=$(grep -o 'G' E.coli.genome.fasta | wc -l)
 echo "($A_COUNT+$T_COUNT)/($G_COUNT+$C_COUNT)" | bc -l #printing ratio
+

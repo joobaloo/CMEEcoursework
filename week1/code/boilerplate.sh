@@ -11,7 +11,7 @@ echo -e "\nThis is a shell script! \n"
 
 #making the script executable and executing it
 #chmod +x boilerplate.sh #chmod FILENAME: change file permissions
-#./boilerplate.sh #can now run the script by just typing this
+#./boilerplate.sh can now run the script by just typing this
 
 
 
