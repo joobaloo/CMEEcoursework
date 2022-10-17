@@ -16,7 +16,7 @@ imagemagick
 bc
 
 **Usage**
-
+Each code script has a description of its purpose in comments
 
 **Author**
 Jooyoung Ser zs519@ic.ac.uk

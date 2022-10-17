@@ -8,3 +8,5 @@ cat $1 > $3
 cat $2 >> $3
 echo "Merged file is"
 cat $3
+echo "the file has been saved into the results folder"
+mv $3 ../results/

@@ -1,6 +1,6 @@
 My CMEE coursework Repository
 
-This repository contains all the coursework materials from the Computational Methods in Ecology and Evolution (CMEE) course at Imperial College London, Silwood park campus. This course was directed by the [MulQuaBio guidebook][https://mhasoba.github.io/TheMulQuaBio/intro.html].
+This repository contains all the coursework materials from the Computational Methods in Ecology and Evolution (CMEE) course at Imperial College London, Silwood park campus. This course was directed by the The Multilingual Quantitative Biologist guide.
 
 **Languages**
 BASH version 3.2.57(1)
@@ -11,7 +11,6 @@ imagemagick
 bc
 
 **Contents**
-
 Week 1
 The week 1 directory includes the coursework material related to:
 1. UNIX and LINUX
