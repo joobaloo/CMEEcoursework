@@ -47,7 +47,12 @@ def foo_6(x):
     return facto
 
 def main(argv):
-    print(foo_1(1))
+    print(foo_1(10))
+    print(foo_2(15))
+    print(foo_3(10))
+    print(foo_4(15))
+    print(foo_5(10))
+    print(foo_6(15))
     return 0
 
 if (__name__ == "__main__"):

@@ -1,3 +1,4 @@
+from pprint import pprint
 taxa = [ ('Myotis lucifugus','Chiroptera'),
          ('Gerbillus henleyi','Rodentia',),
          ('Peromyscus crinitus', 'Rodentia'),
@@ -20,8 +21,11 @@ taxa = [ ('Myotis lucifugus','Chiroptera'),
 
 #### Your solution here #### 
 taxa_dic = {}
-for
+for x, y in taxa:
+        taxa_dic.setdefault(y,[]).append(x)
+pprint(taxa_dic)
 
 # Now write a list comprehension that does the same (including the printing after the dictionary has been created)  
- 
-#### Your solution here #### 
+#### Your solution here ####
+taxa_dic_lc = {x[1]:set([y[0] for y in taxa if y[1] == x[1]]) for x in taxa} 
+pprint(taxa_dic_lc)
