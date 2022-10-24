@@ -48,8 +48,8 @@ def foo_6(x):
 
 def main(argv):
     print(foo_1(10))
-    print(foo_2(15))
-    print(foo_3(10))
+    print(foo_2(15, 10))
+    print(foo_3(10, 5, 2))
     print(foo_4(15))
     print(foo_5(10))
     print(foo_6(15))

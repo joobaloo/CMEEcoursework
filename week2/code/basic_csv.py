@@ -2,7 +2,7 @@ import csv
 
 #Read a file containing:
 # 'Species','Infraorder','Family','Distribution','Body mass male (Kg)'
-with open('~Documents/CMEEcoursework/week2/data/testcsv.csv', 'r') as f:
+with open('../data/testcsv.csv', 'r') as f:
 
     csvread =csv.reader(f)
     temp = []
@@ -12,8 +12,8 @@ with open('~Documents/CMEEcoursework/week2/data/testcsv.csv', 'r') as f:
         print("The species is", row[0])
 
 #write a file containing only species name and body mass
-with open ('~Documents/CMEEcoursework/week2/data/testcsv.csv', 'r') as f:
-    with open('~Documents/CMEEcoursework/week2/data/bodymass.csv', 'w') as g:
+with open ('../data/testcsv.csv', 'r') as f:
+    with open('../data/bodymass.csv', 'w') as g:
         csvread = csv.reader(f)
         csvwrite = csv.writer(g)
         for row in csvread:

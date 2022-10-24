@@ -12,11 +12,19 @@ bc
 
 ## **Contents**
 ### Week 1
-The week 1 directory includes the coursework material related to:
+The week 1 directory includes the coursework material related to the following notebooks:
+
 1. UNIX and LINUX
 2. Shell scripting
 3. Version control with Git
 4. Scientific documents with LATEX
+
+### Week 2
+The week 2 directory includes the coursework material related to the Biological Computing in Python I notebook
+
+## Week 3 
+The week 3 directory includes the coursework material related to the Biological Computing in R and the Data Management and Visualisation notebooks
+
 
 ## **Author**
 Jooyoung Ser zs519@ic.ac.uk
