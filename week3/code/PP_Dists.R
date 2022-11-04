@@ -5,9 +5,11 @@ df$Prey.mass[which(df$Prey.mass.unit=="mg")] <- df$Prey.mass[which(df$Prey.mass.
 df$Prey.mass.unit[which(df$Prey.mass.unit=="mg")] <- "g"
 
 #load packages
-require(dplyr)
-require(ggplot2) 
-require(ggpubr)
+library(dplyr)
+library(ggplot2) 
+library(ggpubr)
+library(readr)
+
 
 theme_set(theme_minimal()) #setting theme for plots
 

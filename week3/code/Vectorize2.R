@@ -24,7 +24,7 @@ stochrick <- function(p0 = runif(1000, .5, 1.5), r = 1.2, K = 1, sigma = 0.2,num
 
 # Now write another function called stochrickvect that vectorizes the above to
 # the extent possible, with improved performance: 
-rm(list = ls())
+
 
 stochrickvect <- function(p0 = runif(1000, .5, 1.5), r = 1.2, K = 1, sigma = 0.2,numyears = 100)
 {

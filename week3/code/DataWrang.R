@@ -33,7 +33,6 @@ colnames(TempData) <- MyData[1,] # assign column names from original data
 ############# Convert from wide to long format  ###############
 require(reshape2) # load the reshape2 package
 
-?melt #check out the melt function
 
 MyWrangledData <- melt(TempData, id=c("Cultivation", "Block", "Plot", "Quadrat"), variable.name = "Species", value.name = "Count")
 

@@ -3,8 +3,9 @@
 ################################################################
 library(tidyverse)
 
+
 ############# Load the dataset ###############
-# header = false because the raw data don't have real headers
+# col_names = false because the raw data don't have real headers
 MyData <- as_tibble(read_csv("../data/PoundHillData.csv", col_names = FALSE))
 
 # header = true because we do have metadata headers
@@ -21,25 +22,29 @@ glimpse(MyData)
 MyData <- t(MyData)
 
 ############# Replace species absences with zeros ###############
-replace_na(MyData, 0)
+MyData[MyData == ""] = 0
 
 ############# Convert raw matrix to data frame ###############
 TempData <- as.data.frame(MyData[-1,],stringsAsFactors = F) #stringsAsFactors = F is important!
 colnames(TempData) <- MyData[1,] # assign column names from original data
 
 ############# Convert from wide to long format  ###############
-?pivot_wider()
 
-MyWrangledData <- pivot_wider(TempData, id=c("Cultivation", "Block", "Plot", "Quadrat"), names_from = "Species", values_from = "Count")
 
-MyWrangledData[, "Cultivation"] <- as.factor(MyWrangledData[, "Cultivation"])
-MyWrangledData[, "Block"] <- as.factor(MyWrangledData[, "Block"])
-MyWrangledData[, "Plot"] <- as.factor(MyWrangledData[, "Plot"])
-MyWrangledData[, "Quadrat"] <- as.factor(MyWrangledData[, "Quadrat"])
-MyWrangledData[, "Count"] <- as.integer(MyWrangledData[, "Count"])
+MyTidyWrangledData <- as.data.frame(TempData %>%
+                                      pivot_longer(cols = (5:45),
+                                    names_to = c("Species"),
+                                    names_pattern = NULL))
+colnames(MyTidyWrangledData)[6] <- "Count"
+  
+MyTidyWrangledData[, "Cultivation"] <- as.factor(MyTidyWrangledData[, "Cultivation"])
+MyTidyWrangledData[, "Block"] <- as.factor(MyTidyWrangledData[, "Block"])
+MyTidyWrangledData[, "Plot"] <- as.factor(MyTidyWrangledData[, "Plot"])
+MyTidyWrangledData[, "Quadrat"] <- as.factor(MyTidyWrangledData[, "Quadrat"])
+MyTidyWrangledData[, "Count"] <- as.integer(MyTidyWrangledData[, "Count"])
 
-str(MyWrangledData)
-head(MyWrangledData)
-dim(MyWrangledData)
+slice_head(MyTidyWrangledData)
+slice_tail(MyTidyWrangledData)
+glimpse(MyTidyWrangledData) 
 
 ############# Exploring the data (extend the script below)  ###############
