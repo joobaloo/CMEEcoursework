@@ -19,6 +19,10 @@ echo "Running model selection and plotting"
 Rscript modelselection.R
 echo "Model selection and plotting complete"
 
+
+#write up word count
+echo "Estimation of word count:"
+texcount miniproject_writeup.tex
 #compiling write up
 echo "Compiling latex document"
 pdflatex miniproject_writeup.tex
