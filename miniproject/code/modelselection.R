@@ -107,11 +107,8 @@ BIC_bestmodels$best_model[BIC_bestmodels$best_model==0] <- NA
 
 
 ##### plotting results of model selection #######
-AIC <- table(AIC_bestmodels$best_model)
-BIC <- table(BIC_bestmodels$best_model)
-
-AIC <- subset(AIC, select = (-c(1)))
-BIC <- subset(BIC, select = (-c(1)))
+AIC <- data.frame(table(AIC_bestmodels$best_model))
+BIC <- data.frame(table(BIC_bestmodels$best_model))
 
 comp_data <- merge(AIC, BIC, by = "Var1")
 names(comp_data) <- c("model", "AIC", "BIC")
