@@ -1,3 +1,8 @@
+## Author: Jooyoung Ser
+# Script: vectorize1.R
+# Description: A script demonstrating the efficiency of vectorizing functions
+# Date: November 2022
+
 M <- matrix(runif(1000000),1000,1000)
 
 SumAllElements <- function(M) {

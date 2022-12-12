@@ -1,3 +1,11 @@
+## Author: Jooyoung Ser
+# Script: plotLin.R
+# Description: This script plots linear regression 
+# Date: November 2022
+
+#loading packages
+library(ggplot2)
+
 x <- seq(0, 100, by = 0.1)
 y <- -4. + 0.25 * x +
   rnorm(length(x), mean = 0., sd = 2.5)

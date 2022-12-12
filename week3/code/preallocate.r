@@ -1,3 +1,8 @@
+## Author: Jooyoung Ser
+# Script: preallocate.R
+# Description: This script shows the use of preallocation in R coding
+# Date: November 2022
+
 NoPreallocFun <- function(x) {
   a <- vector() # empty vector
   for (i in 1:x) {

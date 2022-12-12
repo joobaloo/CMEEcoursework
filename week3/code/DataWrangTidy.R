@@ -1,3 +1,7 @@
+# Author: Jooyoung Ser
+# Script: DataWrangTidy.R
+# Description: This script contains wrangling the Pound Hill dataset using tidyverse package
+# Date: November 2022
 ################################################################
 ################## Wrangling the Pound Hill Dataset ############
 ################################################################
@@ -15,7 +19,6 @@ MyMetaData <- read_csv2("../data/PoundHillMetaData.csv")
 slice_head(MyData)
 slice_tail(MyData)
 glimpse(MyData) 
-
 
 ############# Transpose ###############
 # To get those species into columns and treatments into rows 

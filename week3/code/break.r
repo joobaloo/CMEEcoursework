@@ -1,3 +1,8 @@
+## Author: Jooyoung Ser
+# Script: break.R
+# Description: This script demonstrates the break command in R
+# Date: November 2022
+
 #breaking out of loops
 i <- 0 #Initialize i
     while (i < Inf) {

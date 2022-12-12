@@ -1,3 +1,11 @@
+# Author: Jooyoung Ser
+# Script: Girko.R
+# Description: This script demostrates Girko's circular law
+# Date: November 2022
+
+#load packages
+library(ggplot2)
+
 build_ellipse <- function(hradius, vradius){ # function that returns an ellipse
   npoints = 250
   a <- seq(0, 2 * pi, length = npoints + 1)

@@ -1,3 +1,8 @@
+## Author: Jooyoung Ser
+# Script: controlflowtools.R
+# Description:This script demonstrates control flow tools in R
+# Date: November 2022
+
 #if statements
 a <- TRUE
 if (a == TRUE) {

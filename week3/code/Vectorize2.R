@@ -1,3 +1,7 @@
+# Author: Jooyoung Ser
+# Script: Vectorize2.R
+# Description: This script demonstrates the time saving use of vectorizing
+# Date: November 2022
 # Runs the stochastic Ricker equation with gaussian fluctuations
 
 rm(list = ls())

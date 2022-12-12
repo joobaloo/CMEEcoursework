@@ -1,3 +1,7 @@
+## Author: Jooyoung Ser
+# Script: browse.R
+# Description: This script demonstrates the browser function
+# Date: November 2022
 Exponential <- function(N0 = 1, r = 1, generations = 10) {
   # Runs a simulation of exponential growth
   # Returns a vector of length generations

@@ -1,3 +1,9 @@
+# Author: Jooyoung Ser
+# Script: MyBars.R
+# Description: This script demonstrates bargraphs using ggplot2 
+# Date: November 2022
+
+library(ggplot2)
 a <- read.table("../data/Results.txt", header = TRUE)
 a$ymin <- rep(0, dim(a)[1]) # append a column of zeros
 

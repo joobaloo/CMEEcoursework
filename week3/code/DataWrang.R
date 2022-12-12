@@ -1,3 +1,7 @@
+# Author: Jooyoung Ser
+# Script: DataWrang.R
+# Description: This script contains wrangling the Pound Hill dataset
+# Date: November 2022
 ################################################################
 ################## Wrangling the Pound Hill Dataset ############
 ################################################################

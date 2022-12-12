@@ -1,3 +1,8 @@
+# Author: Jooyoung Ser
+# Script: PP_Regress.R
+# Description: This script performs regression models and plots them with ggplot
+# Date: November 2022
+
 rm(list = ls()) #clear environment
 df <- read.csv("../data/EcolArchives-E089-51-D1.csv") #read data set
 

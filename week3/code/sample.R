@@ -1,3 +1,7 @@
+## Author: Jooyoung Ser
+# Script: sample.R
+# Description: This script contains multiple scripts that sample populations
+# Date: November 2022
 ######### Functions ##########
 
 ## A function to take a sample of size n from a population "popn" and return its mean

@@ -1,3 +1,8 @@
+## Author: Jooyoung Ser
+# Script: ricker.R
+# Description:This script demonstrates the Ricker model in a function
+# Date: November 2022
+
 Ricker <- function(N0=1, r=1, K=10, generations=50)
 {
   # Runs a simulation of the Ricker model

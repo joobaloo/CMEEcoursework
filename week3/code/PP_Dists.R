@@ -1,3 +1,8 @@
+# Author: Jooyoung Ser
+# Script: PP_Dists.R
+# Description: This script explores the distribution of ecolarchives data
+# Date: November 2022
+
 rm(list = ls()) #clear environment
 df <- read.csv("../data/EcolArchives-E089-51-D1.csv") #read data set
 

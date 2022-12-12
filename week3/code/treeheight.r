@@ -1,3 +1,8 @@
+## Author: Jooyoung Ser
+# Script: treeheight.R
+# Description: This script works out the height of trees using angle and distance
+# Date: November 2022
+
 # This function calculates heights of trees given distance of each tree 
 # from its base and angle to its top, using  the trigonometric formula 
 #

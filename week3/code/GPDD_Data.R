@@ -1,13 +1,17 @@
+# Author: Jooyoung Ser
+# Script: GPDD_Data.R
+# Description: This script demonstrates the "maps" package
+# Date : November 2022
 
 #install maps package
-install.packages("maps")
+#install.packages("maps")
 library(maps)
 
 #load data
 load("../data/GPDDFiltered.RData")
 
 #explore function
-?map
+#?map
 
 #plotting data onto world map
 map()

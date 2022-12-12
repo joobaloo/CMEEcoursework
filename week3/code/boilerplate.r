@@ -1,4 +1,8 @@
-# A boilerplate R script
+## Author: Jooyoung Ser
+# Script: boilerplate.R
+# Description: A boilerplate R script
+# Date: November 2022
+
 
 myfunction <- function(Arg1, Arg2) {
   
