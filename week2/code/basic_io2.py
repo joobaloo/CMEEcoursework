@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+""" script that demonstrates saving files using open function """
 #############################
 # FILE OUTPUT
 #############################

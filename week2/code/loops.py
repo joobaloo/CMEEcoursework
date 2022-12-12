@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+""" script that demonstrates loops in python """
 # FOR loops
 for i in range(5):
     print(i)

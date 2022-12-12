@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+""" practical script that aligns DNA sqeuences """
 input_file = open("../data/examplesequences.csv")
 
 lines = input_file.readlines()
@@ -20,6 +22,7 @@ else:
 # A function that computes a score by returning the number of matches starting
 # from arbitrary startpoint (chosen by user)
 def calculate_score(s1, s2, l1, l2, startpoint):
+    """ function that computes a score by returning the number of matches """
     matched = "" # to hold string displaying alignements
     score = 0
     for i in range(l2):

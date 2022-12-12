@@ -1,5 +1,7 @@
-from codecs import latin_1_encode
+#!/usr/bin/env python3
+""" practical script that emphasies use of list comprehensions """
 
+from codecs import latin_1_encode
 
 birds = ( ('Passerculus sandwichensis','Savannah sparrow',18.7),
           ('Delichon urbica','House martin',19),

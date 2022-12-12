@@ -1,4 +1,5 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
+""" script that demonstrates debugging using is_an_oak function"""
 import csv
 import sys
 import doctest
@@ -18,6 +19,7 @@ def is_an_oak(name):
     return name.lower().strip().startswith('quercus')
 
 def main(argv): 
+    """ function that calls above function using scripts in data directory"""
     f = open('../data/TestOaksData.csv','r')
     g = open('../data/JustOaksData.csv','w')
     taxa = csv.reader(f)

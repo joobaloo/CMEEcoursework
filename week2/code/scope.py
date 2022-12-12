@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+""" script that explore variable scope """
 i = 1
 x = 0
 for i in range(10):
@@ -8,6 +10,7 @@ print(i)
 i = 1
 x = 0
 def a_function(y):
+    """ function that demonstrates global/local variables """
     x = 0
     for i in range(y):
         x += 1
@@ -26,6 +29,7 @@ print("Before calling a_function, outside the function, the value of _a_global i
 print("Before calling a_function, outside the function, the value of _b_global is", _b_global)
 
 def a_function():
+    """ function that highlights the use of global varibales """
     _a_global = 4
 
     if _a_global == 4:
@@ -48,6 +52,7 @@ _a_global = 10
 print("Before calling a_function, outside the function, the value of _a_global is", _a_global)
 
 def a_function():
+    """ function that compares global and local variables """
     global _a_global
     _a_global = 5
     _a_local = 4
@@ -60,9 +65,11 @@ a_function()
 print("After calling a_function, outside the function, the value of _a_global now is", _a_global)
 
 def a_function():
+    """ function that shows how global and local variables behave differently"""
     _a_global = 10
 
     def _a_function2():
+        """ nested function """
         global _a_global
         _a_global = 20
     

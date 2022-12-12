@@ -1,4 +1,8 @@
+#!/usr/bin/env python3
+""" script containg buggyfunc function that required debugging """
+
 def buggyfunc(x):
+    """ function that was used to illustrate debugging in python"""
     y = x
     for i in range(x):
         try:

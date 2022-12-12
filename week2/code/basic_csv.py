@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+""" script that reads and writes csv files """
+
 import csv
 
 #Read a file containing:

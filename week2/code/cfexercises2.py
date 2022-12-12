@@ -1,4 +1,7 @@
+#!/usr/bin/env python3
+
 def hello_1(x):
+    """ function that prints hello x/3 times"""
     for j in range(x):
         if j % 3 == 0:
             print('hello')
@@ -7,6 +10,7 @@ def hello_1(x):
 hello_1(12)
 
 def hello_2(x):
+    """ function that hello under specific conditions"""
     for j in range(x):
         if j % 5 == 3:
             print('hello')
@@ -17,6 +21,7 @@ def hello_2(x):
 hello_2(12)
 
 def hello_3(x, y):
+    """ function that prints hello between a range of numbers """
     for i in range(x, y):
         print('hello')
     print(' ')
@@ -24,6 +29,7 @@ def hello_3(x, y):
 hello_3(3, 17)
 
 def hello_4(x):
+    """ function that prints hello when x is not 15 """
     while x != 15:
         print('hello')
         x = x + 3
@@ -32,6 +38,7 @@ def hello_4(x):
 hello_4(0)
 
 def hello_5(x):
+    """ function that prints hello under certain conditions """
     while x < 100:
         if x == 31:
             for k in range(7):
@@ -45,6 +52,7 @@ hello_5(12)
 
 # WHILE loop with BREAK
 def hello_6(x, y):
+    """ function with while looop and break """
     while x: # while x is True
         print("hello! " + str(y))
         y += 1 # increment y by 1 

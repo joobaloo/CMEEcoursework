@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+""" script that demonstrates opening and reading files using open function """
 #############################
 # FILE INPUT
 #############################

@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+""" practial script that highlights dictionary data type in python """
+
 from pprint import pprint
 taxa = [ ('Myotis lucifugus','Chiroptera'),
          ('Gerbillus henleyi','Rodentia',),
