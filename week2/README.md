@@ -66,5 +66,14 @@ This script are part of the notebook practical. It is a modified version of pyth
 ### oaks_debugme.py
 This script are part of the notebook practical. It required debugging and modification for typos to be made.
 
+### grp_align_seqs_better.py
+Take two sequences from two fasta files given as arguments, compare alignments of the sequences and print the alignment that gives the most base matches to a new file called best_match.txt.
+
+### grp_seqs_fasta.py
+Take two sequences from two fasta files given as arguments, compare alignments of the sequences and print the alignment that gives the most base matches to a new file called best_match.txt.
+
+### grp_oaks_debugme.py
+This prints species names for trees from an external CSV file and searches for Oak trees (Quercus spp.). The Oak trees are then written to an output file in the results directory called JustOaksData.csv
+
 ## **Author**
 Jooyoung Ser zs519@ic.ac.uk

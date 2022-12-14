@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[a4paper, total={7in, 12in}]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{natbib}
+\bibliographystyle{unsrtnat}
+
+
+\title{\textbf{Auto-correlation between annual temperatures in Florida\vspace{-0.5em}}}
+\author{Elliott Parnell (EJP122@ic.ac.uk), Jooyoung Ser (jooyoung.ser19@imperial.ac.uk), \\ Anqi Wang (anqi.wang22@imperial.ac.uk) , Linke Feng (l.feng22@imperial.ac.uk) }
+
+
+\begin{document}
+\maketitle
+    \section{Introduction \vspace{-0.5em}}
+    Florida is located in Southeastern USA and is of particular importance as a biological hot-spot (\cite{noss2015global}). Florida is home to a large number of unique habitat types, including the Everglades, North Americas only subtropical preserve (\cite{brown2006species}). This leads to Florida having a high proportion of endemic species (\cite{jenkins2015us}). Understanding the local climate warming in Florida is crucial for predicting how species may fare with future climate warming. 
+\vspace{-0.9em}
+    \section{Methods \vspace{-0.5em}}
+
+    A long term data set of annual mean temperatures from Key West, Florida, was used to calculate the correlation between the temperature of one year and the next. The correlation coefficient was calculated using the Pearson method. The significance of this corelation coefficient was then tested using permutation testing. The data points were randomly shuffled before calculating a new correlation coefficient for the null hypothesis. This was repeated 10,000 times to create a null distribution. The P value was then calculated from the percentage of coefficients in the null distibution greater than the coefficient of the original data. 
+\vspace{-0.9em}
+    \section{Results \vspace{-0.5em}}
+    
+        A significant correlation was found between the temperature of one year and the temperature of the next (correlation coefficient = 0.326, permutation test $P < 0.05$) (Figure 2). \vspace{-0.5em}
+\vspace{-0.9em}
+    \begin{figure}[h]
+        \begin{minipage}{.5\textwidth}
+            \centering
+            \includegraphics[scale=0.4]{results/florida_plot}
+            \caption{Mean annual temperature in Key \newline West, Florida, from 1901 to 2000 \newline \newline \vspace{-0.5em}}
+            \label{fig:test1}
+          \end{minipage}%
+          \begin{minipage}{.5\textwidth}
+            \centering
+            \includegraphics[scale=0.4]{results/autocorr_histogram.pdf}
+            \caption{Null distribution of correlation coefficients \newline between temperature of successive years in Key West, Florida. Red dashed line represents the test threshold correlation coefficient. \vspace{-0.5em}}
+            \label{fig:test2} 
+        \end{minipage}
+    \end{figure}
+    \vspace{-0.9em}
+    \section{Discussion \vspace{-0.5em}}
+    Auto-correlation between years indicates that climate change is happening non-randomly, with the previous years mean temperature affecting the next years. Understanding this allows us to predict future climate warming with better accuracy. 
+    \vspace{-0.9em}
+    \bibliography{AutoCorrFlorida \vspace{-0.5em}}
+
+\end{document}

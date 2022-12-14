@@ -5,6 +5,7 @@
 ## **Languages**
 R version 4.1.3 (2022-03-10)
 Python 3.10.7
+BASH version 3.2.57 (1)
 
 ## **Dependencies**
 numpy
@@ -51,6 +52,12 @@ Practical script that runs fmr.R
 
 ### timeitme.py
 Script that demonstrates timeit() function
+
+### comparevectorization.sh
+Groupwork practical shell script that compares vectorization scripts
+
+### vectorize1.r/vectorize2.r/vectorize1.py/vectorize2.py
+Practical scripts that demonstrate and compare vectorizations in R and python
 
 ## **Author**
 Jooyoung Ser zs519@ic.ac.uk

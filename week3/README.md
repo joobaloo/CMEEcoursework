@@ -5,6 +5,7 @@
 ## **Languages**
 R version 4.1.3 (2022-03-10)
 BASH version 3.2.57(1)
+Python 3.10.7
 
 ## **Dependencies**
 ggplot2
@@ -98,5 +99,23 @@ Script to illustrate vectorisation of functions
 ### vectorize2.r
 Script to illustrate vectorisation of functions
 
+### AutoCorrFlorida.bib
+Practical bibliography for AutoCorrFlorida.tex
+
+### AutoCorrFlorida.tex
+Latex writeup for "Autocorrelation in Florida weather" groupwork practical
+
+### get_TreeHeight.py/get_TreeHeight.R
+Groupwork practical on TreeHeights scripts
+
+### PP_Regress_loc.R
+Similar to PP_Regress.R, separated by the dataset’s Location.
+
+### run_get_TreeHeight.sh
+Shell scfript to run get_TreeHeight.py get_TreeHeight.R
+
+### TAutoCorr.R
+R script for "Autocorrelation in Florida weather" groupwork practical
+
 ## **Author**
-Jooyoung Ser zs519@ic.ac.uk
+Jooyoung Ser zs519@ic.ac.uk 
