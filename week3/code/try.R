@@ -1,4 +1,4 @@
-## Author: Jooyoung Ser
+# Author: Jooyoung Ser
 # Script: try.R
 # Description: This script demonstrates the use of the try function
 # Date: November 2022
