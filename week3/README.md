@@ -4,7 +4,6 @@
 
 ## **Languages**
 R version 4.1.3 (2022-03-10)
-BASH version 3.2.57(1)
 Python 3.10.7
 
 ## **Dependencies**
