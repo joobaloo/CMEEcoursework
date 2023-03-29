@@ -1,0 +1,696 @@
+Starting code feedback for Jooyoung, Week1
+
+Current Points = 100
+
+Note that: 
+(1) Major sections begin with a double "====" line 
+(2) Subsections begin with a single "====" line 
+(3) Code output or text file content are printed within single "*****" lines 
+
+======================================================================
+======================================================================
+Your Git repo size this week is about 13.48 MiB on disk 
+
+PART 1: Checking project workflow...
+
+Found the following directories in parent directory: .git, week7, week3, week2, Feedback, HPC, miniproject, week1
+
+Found the following files in parent directory: README.md, gitignore
+
+Checking for key files in parent directory...
+
+Found .gitignore in parent directory, great! 
+
+Printing contents of .gitignore:
+
+**********************************************************************
+__pycache__
+.DS_Store
+*.pdf
+*.aux
+*.blg
+*.log
+*.bbl
+.idea/
+.Rproj.user
+
+**********************************************************************
+
+Found README in parent directory, named: README.md
+
+Printing contents of README.md:
+
+**********************************************************************
+# My CMEE coursework Repository
+
+This repository contains all the coursework materials from the Computational Methods in Ecology and Evolution (CMEE) course at Imperial College London, Silwood park campus. This course was directed by the The Multilingual Quantitative Biologist guide.
+
+## **Languages**
+BASH version 3.2.57 (1)
+R version 4.1.3 (2022-03-10)
+Python 3.10.7
+
+## **Contents**
+### Week 1
+The week 1 directory includes the coursework material related to the following notebooks:
+
+1. UNIX and LINUX
+2. Shell scripting
+3. Version control with Git
+4. Scientific documents with LATEX
+
+### Week 2
+The week 2 directory includes the coursework material related to the Biological Computing in Python I notebook
+
+## Week 3 
+The week 3 directory includes the coursework material related to the Biological Computing in R and the Data Management and Visualisation notebooks
+
+## Week 7
+The week 7 directory includes the coursework material related to the Biological computing in Python II notebook
+
+## **Author**
+Jooyoung Ser zs519@ic.ac.uk
+**********************************************************************
+
+======================================================================
+Looking for the weekly directories...
+
+Found 4 weekly directories: week1, week2, week3, week7
+
+The Week1 directory will be assessed 
+
+======================================================================
+======================================================================
+PART 2: Checking weekly code and workflow...
+
+======================================================================
+Assessing WEEK1...
+
+Found the following directories: code, sandbox, results, data
+
+Found the following files: README.md
+
+Checking for readme file in weekly directory...
+
+Found README in parent directory, named: README.md
+
+Printing contents of README.md:
+
+**********************************************************************
+# Week 1 Repository
+
+### This repository contains all coursework material from week 1 of the CMEE course
+
+## Week 1 includes the following topics:
+1. UNIX and LINUX
+2. Shell scripting
+3. Version control with Git
+4. Scientific documents with LATEX
+
+## **Languages**
+BASH version 3.2.57(1)
+
+## **Dependencies**
+imagemagick
+bc
+
+## **Usage**
+Each code script has a description of its purpose in comments
+
+## **Author**
+Jooyoung Ser zs519@ic.ac.uk
+
+**********************************************************************
+
+Results directory is empty - good! 
+
+Found 12 code files: tabtocsv.sh, variables.sh, countlines.sh, boilerplate.sh, unixprac1.txt, concatenatetwofiles.sh, csvtospace.sh, firstexample.tex, tff2png.sh, firstbiblio.bib, compilelatex.sh, myexamplescript.sh
+
+Found the following extra files: E.coli.genome.fasta
+0.5 pt deducted per extra file
+
+Current Points = 99.5
+
+======================================================================
+Testing script/code files...
+
+======================================================================
+Inspecting script file tabtocsv.sh...
+
+File contents are:
+
+**********************************************************************
+#!/bin/sh
+#Author: Jooyoung Ser zs519@imperial.ac.uk
+#Script: tabtocsv.sh
+#Desc: useful shell-scripting examples and substituting all tabs with commas
+#Arguments: none
+#Date: 05/10/2022
+
+#error message when no input files provided
+if [ $# -eq 0 ]; then
+    echo "No arguments provided, this script requires one input file"
+    exit 
+fi
+
+#creating comma delimited version of input file
+echo "creating a comma delimited version of $1 ..."
+cat $1 | tr -s "\t" "," >> $1.csv
+
+echo "Done! A new .csv file has been created"
+exit
+**********************************************************************
+
+Testing tabtocsv.sh...
+
+Output (only first 500 characters): 
+
+
+**********************************************************************
+No arguments provided, this script requires one input file
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.00243s
+
+======================================================================
+Inspecting script file variables.sh...
+
+File contents are:
+
+**********************************************************************
+#!/bin/sh
+#Author: Jooyoung Ser zs519@imperial.ac.uk
+#Script: variables.sh
+#Desc: illustrating the use of variables
+#Arguments: none
+#Date: 05/10/2022
+
+#special variables
+echo "this script was called with $# parameters"
+echo "this script's name is $0"
+echo "the arguments are $@"
+echo "the first argument is $1"
+echo "the second argument is $2"
+
+#assigned variables - explicit declaration
+MY_VAR='some string'
+echo 'the current value of the variable is:' $MY_VAR
+echo 
+echo 'please enter a new string'
+read MY_VAR
+echo
+echo 'the current value of the variable is:' $MY_VAR
+echo
+
+#assigned variables - reading (multiple values) from user input
+echo 'enter two numbers separated by a space'
+read a b
+echo
+echo 'you entered' $a 'and' $b 'their sum is:'
+
+#assigned variables; command substitution
+MY_SUM=$(expr $a + $b) 
+echo $MY_SUM
+
+
+
+
+**********************************************************************
+
+Testing variables.sh...
+
+Output (only first 500 characters): 
+
+
+**********************************************************************
+this script was called with 0 parameters
+this script's name is variables.sh
+the arguments are 
+the first argument is 
+the second argument is 
+the current value of the variable is: some string
+
+please enter a new string
+
+the current value of the variable is:
+
+enter two numbers separated by a space
+
+you entered and their sum is:
+
+
+**********************************************************************
+
+Encountered error (or warning):
+
+***IGNORE IF THIS ERROR IS EXPECTED AS PART OF AN IN-CLASS EXERCISE***
+
+expr: syntax error: missing argument after ‘+’
+
+======================================================================
+Inspecting script file countlines.sh...
+
+File contents are:
+
+**********************************************************************
+#!/bin/bash
+#Author: Jooyoung Ser zs519@imperial.ac.uk
+#Script: compilelatex.sh
+#Desc: script to count number of lines in a file
+#Date: Oct 2022
+
+#error message in the case of no input files
+if [ $# -eq 0 ]
+then
+echo "No input file provided"
+exit
+fi
+
+#counting the printing number of lines
+NumLines=`wc -l < $1`
+echo "The file $1 has $NumLines line(s)"
+
+
+**********************************************************************
+
+Testing countlines.sh...
+
+Output (only first 500 characters): 
+
+
+**********************************************************************
+No input file provided
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.00306s
+
+======================================================================
+Inspecting script file boilerplate.sh...
+
+File contents are:
+
+**********************************************************************
+#!/bin/sh
+#Author: Jooyoung Ser zs519@imperial.ac.uk
+#Script: boilerplate.sh
+#Desc: simple boilerplate for shell scripts
+#Arguments: none
+#Date: 05/10/2022
+
+echo -e "\nThis is a shell script! \n"
+
+#exit
+
+#making the script executable and executing it
+#chmod +x boilerplate.sh #chmod FILENAME: change file permissions
+#./boilerplate.sh can now run the script by just typing this
+
+
+
+
+**********************************************************************
+
+Testing boilerplate.sh...
+
+Output (only first 500 characters): 
+
+
+**********************************************************************
+
+This is a shell script! 
+
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.00291s
+
+======================================================================
+Inspecting script file unixprac1.txt...
+
+File contents are:
+
+**********************************************************************
+#!/bin/bash
+#Author: Jooyoung Ser zs519@imperial.ac.uk
+#Script: UnixPrac1.txt
+#Desc: Fasta practical
+#Arguments: none
+#Date: Oct 2022
+
+#setting the current directory to CMEEcoursework/week1/data/fasta
+cd ../data/fasta
+#finding the number of lines in the files
+wc -l 407228326.fasta 407228412.fasta E.coli.fasta
+#number of lines: 27, 127 and 78104 respectively
+
+echo "printing E. coli genome from the second line"
+tail -n +2 E.coli.fasta
+
+#counting the number of "ATGC" sequences in the E. coli genome
+echo "number of ATGC sequences in E.coli genome"
+tail -n +2  E.coli.fasta > E.coli.genome.fasta   #creating new file without the first line
+grep -o 'ATGC' E.coli.genome.fasta | wc -l    #finding matches which is the counted through pipline
+
+#counting number of each base
+export A_COUNT=$(grep -o 'A' E.coli.genome.fasta | wc -l) 
+export T_COUNT=$(grep -o 'T' E.coli.genome.fasta | wc -l)
+export C_COUNT=$(grep -o 'C' E.coli.genome.fasta | wc -l)
+export G_COUNT=$(grep -o 'G' E.coli.genome.fasta | wc -l)
+
+echo "ratio of AT/GC:"
+echo "($A_COUNT+$T_COUNT)/($G_COUNT+$C_COUNT)" | bc -l #printing ratio
+
+
+**********************************************************************
+
+Testing unixprac1.txt...
+
+======================================================================
+Inspecting script file concatenatetwofiles.sh...
+
+File contents are:
+
+**********************************************************************
+#!/bin/bash
+if [ $# -eq 0 ]; then
+    echo "No arguments provided, this script requires two input files"
+    exit 1
+fi
+
+cat $1 > $3
+cat $2 >> $3
+echo "Merged file is"
+cat $3
+echo "the file has been saved into the results folder"
+mv $3 ../results/
+**********************************************************************
+
+Testing concatenatetwofiles.sh...
+
+Output (only first 500 characters): 
+
+
+**********************************************************************
+No arguments provided, this script requires two input files
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.00300s
+
+======================================================================
+Inspecting script file csvtospace.sh...
+
+File contents are:
+
+**********************************************************************
+#!/bin/sh
+#Author: Jooyoung Ser zs519@imperial.ac.uk
+#Script: csvtospace.sh
+#Desc: shell script that converts comma separated values to space separated values (Creating a new file)
+#Arguments: none
+#Date: 05/10/2022
+
+#error message for no inputs provided
+if [ $# -eq 0 ]; then
+    echo "No arguments provided, this script requires one input file"
+    exit 1
+fi
+
+#creating a space separated file
+echo "creating a space separated version of $1 ..."
+cat $1 | tr -s "," " " >> $1.txt
+echo "Done!"
+exit
+**********************************************************************
+
+Testing csvtospace.sh...
+
+Output (only first 500 characters): 
+
+
+**********************************************************************
+No arguments provided, this script requires one input file
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.00287s
+
+======================================================================
+Inspecting script file firstexample.tex...
+
+File contents are:
+
+**********************************************************************
+\documentclass[12pt]{article}
+\title{A Simple Document}
+\author{Your Name}
+\date{}
+\begin{document}
+    \maketitle
+
+    \begin{abstract}
+        This paper analyses a seminal question in population biology
+    \end{abstract}
+
+    \section{Introduction}
+        blah blah
+    
+    \section{Materials \& Methods}
+        A foundational equation of population biology is:
+
+        \begin{equation}
+            \frac{dN}{dt} = r N (1 - \frac{N}{K})
+        \end{equation}
+        
+        It was first proposed by Verhulst in 1838 \cite{verhulst1838notice}.
+
+        \bibliographystyle{plain}
+
+        \bibliography{firstbiblio}
+        \end{document}
+
+**********************************************************************
+
+Testing firstexample.tex...
+
+======================================================================
+Inspecting script file tff2png.sh...
+
+File contents are:
+
+**********************************************************************
+#!/bin/bash
+#Author: Jooyoung Ser zs519@imperial.ac.uk
+#Script: tabtocsv.sh
+#Desc: Shell script that converts .tif files to .png files
+#Arguments: none
+#Date: Oct 2022
+
+#error message when no input files provided
+if [ $# -eq 0 ]; then
+    echo "No arguments provided, this script requires one input file"
+    exit 
+fi
+
+#converting file type
+for f in *.tif; 
+    do  
+        echo "Converting $f"; 
+        convert "$f"  "$(basename "$f" .tif).png"; 
+    done
+
+
+**********************************************************************
+
+Testing tff2png.sh...
+
+Output (only first 500 characters): 
+
+
+**********************************************************************
+No arguments provided, this script requires one input file
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.00304s
+
+======================================================================
+Inspecting script file firstbiblio.bib...
+
+File contents are:
+
+**********************************************************************
+@article{verhulst1838notice,
+  title={Notice on the law that the population follows in its growth},
+  author={Verhulst, PF},
+  journal={Corresp Math Phys},
+  volume={10},
+  pages={113--26},
+  year={1838}
+}
+**********************************************************************
+
+Testing firstbiblio.bib...
+
+======================================================================
+Inspecting script file compilelatex.sh...
+
+File contents are:
+
+**********************************************************************
+#!/bin/bash
+#Author: Jooyoung Ser zs519@imperial.ac.uk
+#Script: compilelatex.sh
+#Desc: script to compile latex with bibtex
+#Date: 05/10/2022
+
+
+pdflatex $1.tex
+bibtex $1
+pdflatex $1.tex
+pdflatex $1.tex
+
+mv $1.pdf ../results/
+
+evince ../results/$1.pdf &
+
+## Cleanup
+rm *.aux
+rm *.log
+rm *.bbl
+rm *.blg
+
+##to run bash compilelatex.sh firstexample
+**********************************************************************
+
+Testing compilelatex.sh...
+
+Output (only first 500 characters): 
+
+
+**********************************************************************
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/usr/share/texlive/texmf-dist/tex/latex/tools/.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-01-21> File ignored)
+*
+! Emergency stop.
+<*> .tex
+        
+!  ==> Fatal error occurred, no output PDF file produced!
+Transcript written on .log.
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded 
+**********************************************************************
+
+Encountered error (or warning):
+
+***IGNORE IF THIS ERROR IS EXPECTED AS PART OF AN IN-CLASS EXERCISE***
+
+bibtex: Need exactly one file argument.
+Try `bibtex --help' for more information.
+mv: cannot stat '.pdf': No such file or directory
+rm: cannot remove '*.aux': No such file or directory
+rm: cannot remove '*.log': No such file or directory
+rm: cannot remove '*.bbl': No such file or directory
+rm: cannot remove '*.blg': No such file or directory
+
+(evince:223159): Handy-WARNING **: 15:18:53.972: Using GtkSettings:gtk-application-prefer-dark-theme together with HdyStyleManager is unsupported. Please use HdyStyleManager:color-scheme instead.
+
+** (evince:223159): WARNING **: 15:18:54.192: Error when getting information for file “/home/mhasoba/Documents/Teaching/IC_CMEE/2022-23/Coursework/StudentRepos/JooyoungSer_/week1/results/.pdf”: No such file or directory
+
+** (evince:223159): WARNING **: 15:18:54.192: set_filenames: Error when getting information for file “/home/mhasoba/Documents/Teaching/IC_CMEE/2022-23/Coursework/StudentRepos/JooyoungSer_/week1/results/.pdf”: No such file or directory
+
+** (evince:223159): WARNING **: 15:18:54.217: Error setting file metadata: No such file or directory
+
+** (evince:223159): WARNING **: 15:18:54.217: Error setting file metadata: No such file or directory
+
+** (evince:223159): WARNING **: 15:18:54.217: Error setting file metadata: No such file or directory
+
+** (evince:223159): WARNING **: 15:18:54.217: Error setting file metadata: No such file or directory
+
+** (evince:223159): WARNING **: 15:18:54.217: Error setting file metadata: No such file or directory
+
+** (evince:223159): WARNING **: 15:18:54.217: Error setting file metadata: No such file or directory
+
+** (evince:223159): WARNING **: 15:18:54.217: Error setting file metadata: No such file or directory
+
+** (evince:223159): WARNING **: 15:18:54.217: Error setting file metadata: No such file or directory
+
+** (evince:223159): WARNING **: 15:18:54.217: Error setting file metadata: No such file or directory
+
+** (evince:223159): WARNING **: 15:18:54.217: Error setting file metadata: No such file or directory
+
+** (evince:223159): WARNING **: 15:18:54.217: Error setting file metadata: No such file or directory
+
+** (evince:223159): WARNING **: 15:18:54.217: Error setting file metadata: No such file or directory
+
+** (evince:223159): WARNING **: 15:18:54.223: Error setting file metadata: No such file or directory
+
+** (evince:223159): WARNING **: 15:18:54.223: Error setting file metadata: No such file or directory
+
+======================================================================
+Inspecting script file myexamplescript.sh...
+
+File contents are:
+
+**********************************************************************
+#!/bin/sh
+#Author: Jooyoung Ser zs519@imperial.ac.uk
+#Script: myexamplescript.sh
+#Desc: introducing the $USER/$USERNAME environmental variable
+#Arguments: none
+#Date: 05/10/2022
+
+MSG1='hello'
+MSG2=$USER
+echo "$MSG1 $MSG2"
+echo "sup $MSG2"
+echo
+**********************************************************************
+
+Testing myexamplescript.sh...
+
+Output (only first 500 characters): 
+
+
+**********************************************************************
+hello mhasoba
+sup mhasoba
+
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.00344s
+
+======================================================================
+======================================================================
+Finished running scripts
+
+Ran into 2 errors
+
+======================================================================
+======================================================================
+
+FINISHED WEEKLY ASSESSMENT
+
+Current Points for the Week = 99.5
+
+NOTE THAT THESE ARE POINTS, NOT MARKS FOR THE WEEK!
